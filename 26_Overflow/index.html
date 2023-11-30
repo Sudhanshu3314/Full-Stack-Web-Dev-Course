@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property</title>
+    <style>
+        .box {
+            margin: auto;
+            width: 80vw;
+            height: 15vh;
+            border: 2px solid red;
+            box-sizing: border-box;
+            padding: 20px 40px;
+            overflow: auto;
+            /* white-space: nowrap; This no-wrap is used for scrolling the text in horizontal manner */
+            /* text-overflow:ellipsis; */
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores aut odio necessitatibus id inventore,
+        magnam magni iure ex vel delectus quo, sunt odit consequatur culpa cumque tenetur libero a ipsam deleniti
+        laborum quod non nobis minima. Aperiam vitae, nulla eum facilis animi perspiciatis qui? Optio, consectetur!
+        Quos, repellat deleniti?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur fugiat nam voluptates, sequi, placeat officia
+        facilis suscipit architecto, praesentium alias earum voluptatum recusandae? Laudantium velit voluptatibus
+        aliquam aliquid? Ipsum repudiandae blanditiis ratione dolore laborum similique beatae fugiat, ullam suscipit
+        atque consequatur, aspernatur delectus, molestiae dignissimos. Facere tempore recusandae quod laudantium quam
+        similique laborum nesciunt explicabo sed qui minima omnis accusantium, culpa reprehenderit. Voluptates itaque
+        magni officiis id doloremque, et cum praesentium natus, repudiandae recusandae est eum optio, inventore illum
+        aspernatur veniam asperiores laboriosam. Natus quam neque ducimus repellat quas ea quibusdam, ipsum consequatur,
+        laudantium dolores, culpa repudiandae excepturi dolorum ipsam.
+    </div>
+</body>
+
+</html>

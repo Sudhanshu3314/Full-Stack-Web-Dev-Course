@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity and Cascade Algorithm</title>
+    <style>
+        h1 {
+            color: aqua;
+        }
+
+        /* h1.yellow{
+            color: brown;
+        } */
+        .cpurple {
+            color: purple;
+        }
+
+        /* specificity of this selector is 1 + 10 = 11  */
+        .h1 yellow {
+            color: green;
+        }
+
+        /* Specificity of this cred selector is 10  */
+        .cred {
+            color: yellowgreen !important;
+        }
+
+        /* Specificity of this yellow selector is 10  */
+        .yellow {
+            color: yellow;
+        }
+
+        /* Specificity of this id h1 selector is 100  */
+        #h1 {
+            color: blue;
+        }
+
+        [data-x="sudhanshu"] {
+            color: yellow;
+            background: red;
+        }
+
+
+        /* !important value is 10000 */
+
+        /* Specificity  */
+        /* Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector */
+
+        /* Universal Selector: 0
+           Element selectors and pseudo-elements: 1
+           Class selectors, attribute selectors, and pseudo-classes: 10
+           ID selectors: 100
+           Inline styles: 1000 */
+
+        /* 1 10 10 10 10 Specificity */
+        /* However specificity is more than only the css of that selector will apply */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: aquamarine;" class="yellow cred cpurple" id="h1" data-x="sudhanshu">CSS Specificity</h1>
+
+        <br><br>
+        <h3><a href="https://www.codewithharry.com/tutorial/css-specificity/">For Learn More</a></h3>
+    </div>
+</body>
+
+</html>

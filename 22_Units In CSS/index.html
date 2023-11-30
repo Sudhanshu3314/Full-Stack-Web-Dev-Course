@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            border: 10px solid red;
+            width: 60vw;
+            box-sizing: border-box;
+            height: 10vh;
+            margin: 20px auto;
+            background: yellow;
+        }
+
+        .con {
+            margin: 20px;
+            background-color: blue;
+            height: 50vh;
+            color: white;
+            width: 60vw;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 18px;
+            overflow: auto;
+        }
+
+        .con p {
+            font-size: 2em;
+            /* This em unit used to respect to parent element */
+            font-size: 12rem;
+            /* This rem unit used to respect to root element */
+        }
+
+        .myCont {
+            background: aqua;
+            padding: 10px;
+            color: brown;
+            font-size: 30px;
+            /* width: 100vmin; */
+            margin: 30px auto;
+            width: 70vw;
+            min-height: 80vh;
+            border: 2px solid red;
+        }
+
+        .myCont div {
+            width: 50%;
+            padding: 10px;
+            border: 3px solid brown;
+        }
+
+        .myCont div div {
+            padding: 10px;
+            width: 40%;
+            border: 4px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">This is a box</div>
+
+    <div class="con">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus consequatur numquam ipsa deserunt totam
+            quo,
+            enim perspiciatis itaque nesciunt laudantium id voluptate incidunt, soluta tempora ea eaque minima saepe,
+            quis
+            mollitia fugit? Nam provident aperiam velit, inventore aut molestias rerum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti cum ullam itaque odio nemo saepe libero
+            cupiditate quae esse repudiandae, provident, corporis autem harum sunt facilis. Est quae consequatur, eius
+            natus, aperiam aliquid quasi vel, ut architecto minima neque excepturi debitis quo vero accusamus id
+            voluptatum
+            temporibus porro dignissimos quidem. </p>
+
+    </div>
+
+    <div class="myCont">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus adipisci possimus amet quidem saepe, magni
+            quisquam deserunt, non minus minima dolores consectetur facere. Accusantium quo non quidem, sunt vel harum.
+            <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores aut eos ipsum ipsam sint rerum
+                consectetur
+                corrupti quos culpa illum?
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
