@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Whatever variable is defined in :root that all variable is global which means that can be used in the full css file  */
+            /* variable : value; */
+            --color: darkblue;
+            --secColor: rgb(255, 188, 235);
+            --defpadding:40px;
+            --defopacity:0.9;
+        }
+
+        nav {
+            background-color: var(--color);
+        }
+        
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+        ul li:first-child{
+            --color:rgb(255, 107, 107);
+            opacity: var(--defopacity);
+            background-color: var(--color , blue); /*if variable not found do like this */
+        }
+        ul li {
+            list-style: none;
+            padding: var(--defpadding);
+            border: 5px solid var(--secColor);
+        }
+
+        .con {
+            background-color: rgb(246, 246, 255);
+            color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="con">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos magnam expedita minima aspernatur architecto
+        excepturi laboriosam ea, quae iste. Harum similique, porro aut accusantium voluptate iusto consequuntur possimus
+        quos impedit, sunt sit molestiae ut. Velit rem sed perspiciatis repellat at, reiciendis dicta totam ea sequi
+        officia porro non illo eligendi.
+    </div>
+</body>
+
+</html>
