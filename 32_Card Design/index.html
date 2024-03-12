@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+
+    <style>
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 240px;
+            background-color: white;
+            padding: 20px 20px;
+            flex-wrap: wrap;
+            border-radius: 30px;
+            margin: 20px;
+            box-shadow: 0px 0px 4px;
+            /* transform: rotatex(88deg); */
+            transition: all 1s;
+        }
+
+        .card:hover {
+            transform: rotateX(0deg);
+            box-shadow: 0 0 10px;
+        }
+
+        .card img {
+            width: 240px;
+            margin: 7px 0px 10px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px brown;
+        }
+
+        .btn {
+            margin: 2px 5px 0px;
+            border-radius: 20px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        @media screen and (orientation:portrait) {
+            .cards{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body bgcolor="aliceblue">
+    <div class="cards">
+        <div class="card">
+            <div><img src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="">
+            </div>
+            <div class="capsule"><button class="btn">Nature</button>
+                <button class="btn">Lake</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, vero aut laudantium impedit molestias
+                corrupti
+                facilis inventore voluptas repudiandae enim voluptates magnam placeat, totam nulla sit maxime
+                reprehenderit,
+                sed magni numquam! Aspernatur, dolor sit labore eaque illo ipsam blanditiis in?</p>
+
+        </div>
+
+        <div class="card">
+            <div><img src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="">
+            </div>
+            <div class="capsule"><button class="btn">Nature</button>
+                <button class="btn">Lake</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, vero aut laudantium impedit molestias
+                corrupti
+                facilis inventore voluptas repudiandae enim voluptates magnam placeat, totam nulla sit maxime
+                reprehenderit,
+                sed magni numquam! Aspernatur, dolor sit labore eaque illo ipsam blanditiis in?</p>
+
+        </div>
+
+        <div class="card">
+            <div><img src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="">
+            </div>
+            <div class="capsule"><button class="btn">Nature</button>
+                <button class="btn">Lake</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, vero aut laudantium impedit molestias
+                corrupti
+                facilis inventore voluptas repudiandae enim voluptates magnam placeat, totam nulla sit maxime
+                reprehenderit,
+                sed magni numquam! Aspernatur, dolor sit labore eaque illo ipsam blanditiis in?</p>
+
+        </div>
+
+        <div class="card">
+            <div><img src="https://hips.hearstapps.com/hmg-prod/images/nature-quotes-landscape-1648265299.jpg" alt="">
+            </div>
+            <div class="capsule"><button class="btn">Nature</button>
+                <button class="btn">Lake</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, vero aut laudantium impedit molestias
+                corrupti
+                facilis inventore voluptas repudiandae enim voluptates magnam placeat, totam nulla sit maxime
+                reprehenderit,
+                sed magni numquam! Aspernatur, dolor sit labore eaque illo ipsam blanditiis in?</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
