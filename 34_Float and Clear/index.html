@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+    <style>
+        .boxes{
+            border: 3px solid red;
+            padding: 10px;
+        }
+        .box {
+            width: 95%;
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid brown;
+        }
+        img{
+            float: right;
+            display: flow-root;
+            width: 300px;
+        }
+
+        .box:nth-child(3){
+            clear: both; 
+            /* This above clear property is used for overcome from float where applied */
+            background-color: yellow;
+            color: brown;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg"
+            alt="">
+        <div class="box" id="box1">I am a Box 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed ratione quibusdam velit a, unde harum, perspiciatis amet eius quod optio exercitationem rem? Nulla minima Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nostrum sint quibusdam rem, id eveniet perspiciatis? Labore rerum ratione inventore.</div>
+        <div class="box" id="box2">I am a Box 2</div>
+        <div class="box" id="box3">I am a Box 3</div>
+    </div>
+</body>
+
+</html>
