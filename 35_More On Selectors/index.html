@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More On Selectors</title>
+
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+        /* .boxes::first-line{ above first line property given
+            color: blue;
+        }
+        .boxes::first-letter{
+            font-size: 23px;
+        } */
+
+        /* .boxes *{
+            color: blue;
+            border: 3px solid brown ;
+            margin: 10px 15px ;
+            padding: 5px 10px;
+        }
+
+        This below is multiple selector 
+        .box , [data-color="primary"]{ 
+            margin-top: 30px;
+            border-top: 5px solid red;
+        }
+
+        .box:nth-child(odd){
+            background-color: yellow;
+        }
+
+        .box:nth-last-child(2){
+            background-color: aqua;
+        } */
+
+        .boxes::before {
+            content: "Sudhanshu is very good boy";
+            color: blue;
+        }
+
+        .boxes::after {
+            content: "I worship my country and I am ready to give my life for my country";
+            color: green;
+        }
+
+        ::selection {
+            color: yellow;
+            background-color: red;
+        }
+
+        .box::first-letter{
+            font-size: 30px;
+            color: brown;
+        }
+
+        [class="txt"]::placeholder{
+            color: red;
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        
+    </style>
 </head>
+
 <body>
-    
+
+    <div class="boxes">
+        <div data-color="primary" class="box" id="box1">I am a Box 1</div>
+        <div class="box" id="box2">Hey I am a Box 2 </div>
+        <div class="box" id="box3">Hey I am a Box 3 </div>
+
+        <input type="text" class="txt" placeholder="Enter your Name........">
+    </div>
+
 </body>
+
 </html>
