@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            border: 3px solid brown;
+            display: flex;
+            height: 100vh;
+
+            /* Main axis depends on flex direction where flex direction at that direction main axis have way */
+
+            /* Cross axis always perpendicular to main axis */
+
+            justify-content: center;
+            align-items: center;
+            gap: 10px 20px;
+            /* justify-content: center; So, justify content applied by looking main axis of flexbox */
+            /* flex-direction: column; */
+            /* flex-direction: column; By default row */
+            /* flex-wrap: wrap; */
+            /* align-items: center; */
+            /* So, align items applied by looking cross axis of flexbox */
+
+            /* align-content: center; */
+            /*So, align-content is used for multiple line content which is in flexbox when items overflow or it can be wrap */
+
+            flex-flow: row wrap;
+            /* shorthand property for flex-flow: flex-direction flex-wrap ; */
+
+            /* gap: 20px 50px; */
+        }
+
+        .item-4{
+            /* flex-grow: 2; Flex box will grow by multiples of 2 by width of item or it can be grow minimum / greater than that also because if its got space then it will be occupied by this item which is having flex-grow but never go to maximum value of flex box multiples of 2 by width  */
+            /* flex-shrink: 2; */
+            align-self: flex-end;
+            order: -3;
+        }
+
+        .item-7{
+            order: -1; /* This follow the rule of Number line according to that box i.e. item is ordered and whatever item doesn't assign order property it's having order : 0 default value */
+        }
+
+        .item-2{
+            align-self: flex-start;
+            order: 1;
+        }
+        .item-6{
+            order: 100;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            border: 3px solid red;
+            font-size: 50px;
+            background: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item item-2">2</div>
+            <div class="item">3</div>
+            <div class="item item-4">4</div>
+            <div class="item">5</div>
+            <div class="item item-6">6</div>
+            <div class="item item-7">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            
+        </div>
+    </main>
+</body>
+
+</html>

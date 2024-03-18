@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Template Area</title>
+    <style>
+        .container{
+            padding: 10px 20px ;
+            display: grid;
+            border: 2px solid brown;
+            grid-template-areas: " nav nav nav "
+                                 " side article article "
+                                 " footer footer footer ";
+
+        }
+        .item{
+            height: 70px;
+            box-sizing: border-box;
+            border: 3px solid red;
+            font-size: 20px;
+        }
+        .item-1{
+            grid-area: nav;
+            background-color: aqua;
+        }
+        .item-2{
+            grid-area: side;
+            background-color: yellow;
+        }
+        .item-3{
+            grid-area: article;
+            background-color: green;
+        }
+        .item-4{
+            grid-area: footer;
+            background-color: rgba(255, 162, 162, 0.322);
+        }
+        .item-5{
+            grid-area: nav;
+            text-align: center;
+            background-color: rgba(252, 252, 75, 0.634);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">Nav</div>
+        <div class="item item-2">Side</div>
+        <div class="item item-3">Article</div>
+        <div class="item item-4">Footer</div>
+        <div class="item item-5">Overlapped 1st item & 5th item</div>
+    </div>
+</body>
+</html>

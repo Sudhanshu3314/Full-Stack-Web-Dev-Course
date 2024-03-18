@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            margin: auto;
+            border: 3px solid red;
+            display: grid;
+            width: 100vw;
+            gap: 10px 44px;
+            height: 100vh;
+            /* This align items and justify-items is used for position only items of container  */
+            /* align-items: center;
+            justify-items: center; */
+
+            /* This align content and justify-content is used for position only full content of container  */
+            /* align-content: center;
+            justify-content: center; */
+
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: auto auto; */
+            grid-template-columns: 1fr 2fr 1fr ;
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-columns: repeat(4, minmax(100px , 60px)); */
+
+            /* grid-template-columns: [pehla] 120px [doosra] 100px [teesra] ; */
+            /* grid-template-columns: auto auto auto; For equal distribution of space in grid */
+
+        }
+
+        .item {
+            border: 2px solid brown;
+            font-size: 40px;
+            width: 100px;
+            height: 100px; 
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        .item-1{
+            align-self: center;
+            justify-self: center;
+        }
+
+        /* .item-4{
+            grid-row: 1/2;
+            grid-column: pehla/doosra;
+        } */
+        /* .item-1{
+            grid-row: 1/2;
+            grid-column: pehla/doosra;
+        } */
+
+        /* .item-4{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .item-1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }  Overlapping can be done like this applying CSS */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>

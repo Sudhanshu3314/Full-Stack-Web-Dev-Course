@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        :root{
+            --blue:rgb(0, 0, 167);
+            --red:rgba(255, 65, 65, 1);
+            --black:rgba(0, 0, 0, 0.7);
+            --yellow:rgba(255, 255, 107, 0.953);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: default;
+            font-weight: bold;
+            color: var(--blue);
+        }
+        header nav ul li:hover{
+            color: var(--red);
+            box-shadow: 0 0 6px ;
+            font-weight: bold;
+            background-color:var(--yellow) ;
+            border: 2px solid var(--blue);
+        }
+
+        header nav ul li {
+            transition: all 700ms;
+            list-style-type: none;
+            box-shadow: 0 0 2px var(--black);
+            display: inline;
+            border: 2px solid var(--red);
+            padding: 3px 7px;
+            border-radius: 20px;
+            margin: 10px 18px;
+            font-size: 17px;
+        }
+
+        header nav ul {
+            padding: 16px 24px;
+            background-color: rgba(255, 174, 174, 0.348);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Services</li>
+                </a>
+                <a href="#">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
