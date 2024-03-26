@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container {
+            width: 90vw;
+            height: 90vh;
+            border: 3px solid blue;
+            background-color: rgb(220, 255, 220);
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid brown;
+            background-color: rgb(255, 195, 195);
+            /* animation-name: Name of animation ;
+            animation-duration: duration takes by animation;
+            animation-timing-function: motion type of animation;
+            animation-delay: delay timing of animation;
+            animation-direction: alternate-reverse;
+            animation-fill-mode:forwards ;
+            animation-iteration-count: infinite;
+            animation-play-state: paused; */
+
+            animation: MeraAnimation 3s ease-in-out 2s infinite alternate-reverse;
+        }
+
+        .box1 {
+            animation: nextAnimation 15s 2s infinite ;
+            background-color: yellow;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        @keyframes MeraAnimation {
+            from {
+                width: 50px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+
+        @keyframes nextAnimation {
+            0% {
+                top: 0px;
+                left: 0px;
+                background: red;
+            }
+            20%{
+                top: 220px;
+                left: 0px;
+                background-color: blue;
+            }
+            40%{
+                top: 220px;
+                left: 100px;
+                background-color: green;
+            }
+            60%{
+                top: 0px;
+                left: 100px;
+                background-color: yellow;
+            }
+            80%{
+                top: 0px;
+                left: 200px;
+                background-color: brown;
+            }
+            85%{
+                top: 220px;
+                left: 200px;
+                background-color: aquamarine;
+            }
+            90%{
+                top: 220px;
+                left: 300px;
+                background-color: yellow;
+            }
+            95%{
+                top: 0px;
+                left: 300px;
+                background-color: blue;
+            }
+            98%{
+                top: 0px;
+                left: 400px;
+                background-color: green;
+            }
+            100%{
+                top: 220px;
+                left: 400px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box box1">NewBox</div>
+    </div>
+</body>
+
+</html>

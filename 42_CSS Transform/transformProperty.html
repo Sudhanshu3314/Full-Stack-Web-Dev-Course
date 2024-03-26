@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Transform Property</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            display: flex;
+            gap: 20px 30px;
+            margin: 5% auto;
+        }
+
+        .box {
+            width: 130px;
+            height: 70px;
+            margin: 10px;
+            background-color: rgb(209, 209, 209);
+        }
+
+        .red {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 70px;
+            transform: translate(0%);
+            background-color: rgba(255, 178, 178, 0.51);
+            transition: all 1s !important;
+        }
+
+        .scaleX:hover {
+            transform: scaleX(1.4);
+        }
+
+        .scaleY:hover {
+            transform: scaleY(1.4);
+        }
+
+        .scale:hover {
+            transform: scale(1.4);
+        }
+
+        .translateX:hover {
+            transform: translateX(40%);
+        }
+
+        .translateY:hover {
+            transform: translateY(40%);
+        }
+        .translate:hover {
+            transform: translate(40%,40%);
+        }
+
+        .rotate:hover {
+            transform: rotate(50deg);
+        }
+
+        .matrix:hover {
+            transform: matrix(1, 2, 3, 4, 5, 6);
+        }
+
+        .skew:hover {
+            transform: skew(40deg);
+        }
+
+        .skewX:hover {
+            transform: skewX(40deg);
+        }
+        .skewY:hover {
+            transform: skewY(40deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Scale X : Scales the element on the X-axis -->
+        <div class="box">
+            <div class="red scaleX">Scale X</div>
+        </div>
+
+        <!-- Scale Y : Scales the element on the Y-axis -->
+        <div class="box">
+            <div class="red scaleY">Scale Y</div>
+        </div>
+
+        <!-- Scale: Scales the element on both axis -->
+        <div class="box">
+            <div class="red scale">Scale</div>
+        </div>
+
+        <!-- Translate X : shift the element on the x-axis -->
+        <div class="box">
+            <div class="red translateX">translateX</div>
+        </div>
+        <!-- Translate Y : shift the element on the y-axis -->
+        <div class="box">
+            <div class="red translateY">translateY</div>
+        </div>
+        <!-- Translate : shift the element on the both axis -->
+        <div class="box">
+            <div class="red translate">Translate</div>
+        </div>
+
+        <div class="box">
+            <div class="red matrix">Matrix</div>
+        </div>
+
+        <!-- Rotate : Rotate the element -->
+        <div class="box">
+            <div class="red rotate">Rotate</div>
+        </div>
+
+        <!-- Skew : Skew means outside the plane -->
+        <div class="box">
+            <div class="red skew">Skew</div></div>
+
+            <!-- SkewX : Skew means outside the plane by x axis -->
+            <div class="box">
+                <div class="red skewX">SkewX</div></div>
+            <div class="box">
+                <div class="red skewY">SkewY</div></div>
+        </div>
+</body>
+
+</html>

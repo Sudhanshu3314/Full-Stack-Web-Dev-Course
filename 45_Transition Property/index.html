@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+    <style>
+        .container {
+            background-color: red;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            width: 5vw;
+            height: 4vh;
+            background-color: aqua;
+        }
+
+        .translate {
+            transform: translateX(10%) translateY(10%);
+
+            /* transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+            /* transition: property duration timing-function delay; */
+            transition: all 10s cubic-bezier(0.19, 1, 0.22, 1) 2ms;
+            /*Shorthand Property for Transition in CSS */
+
+        }
+
+        .translate:hover {
+            transform: translate(500%, 600%) scale(1.5);
+            background-color: yellow;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+
+</html>

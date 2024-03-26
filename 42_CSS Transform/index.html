@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 3px solid brown;
+            background-color: rgb(255, 255, 180);
+            /* transform: rotate(0.5turn); */
+            /* transform: rotateX(40deg); This turns like its on horizontal axis */
+            /* transform: rotateY(60deg); This turns like its on vertical axis */
+            /* transform: rotateZ(60deg); This turns like its line axis going inside screen */
+            /* transform: scale(1.5); This increase size by 1.5x from both axis i.e.x and y */
+
+            /* transform: scaleX(1.5);  This increase size by 1.5x from x axis */
+            /* transform: scaleY(1.5);   This increase size by 1.5x from y axis  */
+
+            /* transform: skew(30deg); This is used for giving slant look to item by deg  */
+            /* transform: skewY(30deg); This is used for giving slant look to item by deg along Y axis */
+            /* transform: skewX(30deg); This is used for giving slant look to item by deg along X axis */
+            /* transform: translateY(0%); This translateY helps to change the position according to Y axis if its 100% then width of its box displace from its current position */
+
+            /* transform: rotate(40deg); */
+            /* transform-origin: 50% 400%; */
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            /* transition: all 2s; */
+        }
+
+        /* .box:hover {
+            transform: translateX(300%);
+        } */
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            border: 3px solid purple;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        /* .box1 {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            transform: translateY(-100%);
+            transition: all 1s;
+
+        }
+
+        .box1:hover {
+            transform: translateX(100%) translateY(-100%);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Sudhanshu</div>
+        <!-- <div class="box1"></div> -->
+    </div>
+</body>
+
+</html>
