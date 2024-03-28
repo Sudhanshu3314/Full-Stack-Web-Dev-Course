@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filter</title>
+    <style>
+        .image {
+            filter: blur(10px);
+            width: 500px;
+            transition: all 1s;
+        }
+
+        img:hover {
+            filter: blur(0px);
+        }
+
+        #img2{
+            filter: brightness(250%);
+        }
+        #img3{
+            filter: sepia(100%);
+            /* filter: grayscale(100%); for black and white image should be grayscale(100%) */
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="https://whytedevil.netlify.app/fauji.jpg" alt="" class="image" id="img1"></div>
+    <div><img src="https://cdn.siasat.com/wp-content/uploads/2023/04/SRK.jpg" alt="" class="image" id="img2"></div>
+    <div><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg" alt="" class="image" id="img3">
+    </div>
+</body>
+
+</html>
