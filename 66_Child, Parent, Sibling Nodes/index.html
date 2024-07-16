@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child , Parent & Sibling Nodes</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            border: 2px solid brown;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--This is Comment Nodes -->
+        <div class="box" id="box1">Box 1</div>  
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+        <div class="box" id="box5">Box 5</div>
+    </div>
+
+    <script>
+        console.log("Sudhanshu barnwal hello");
+
+        // Note 
+        // childNodes => This childNodes always show text Node and Element Node
+        // but
+        // ElementChild => This elementChild always show element node
+        // children => This children keyword always show element nodes
+
+        // document.body.childElementCount => This gives element child count 
+        // document.body.childNodes
+        // document.body.childNodes[0]
+        // document.body.childNodes[1]
+        // document.body.childNodes[2]
+
+        // document.body.children
+        // document.body.children[0] => Text Node
+        // document.body.children[1] => Element Node
+
+        // document.body.firstChild => Text Node
+        // document.body.lastChild => Text Node
+
+        // document.body.firstElementChild => Element Nodes .box #box1
+        // document.body.children[0] => firstElementChild i.e. Element Nodes .box #box1
+        // document.body.children[1] => Element Nodes .box #box2
+        // document.body.children[2] => Element Nodes .box #box3
+        // document.body.lastElementChild => Element Nodes .box #box5
+        // document.body.children[2].nextElementSibling => Element Nodes .box #box4
+        // document.body.children[2].previousElementSibling => Element Nodes .box #box2
+
+        // document.body.children[0].nextElementSibling => Element Nodes script tag
+
+    </script>
+</body>
+</html>

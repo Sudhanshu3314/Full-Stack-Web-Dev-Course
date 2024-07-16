@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting By Id's , Classes and More</title>
+    <style>
+        .box {
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">Bhupendra Jogi 1</div>
+        <div class="box" id="box1.5">Bhupendra Jogi 1.5</div>
+        <div class="box" id="box2">Bhupendra Jogi 2</div>
+        <div class="box" id="box2.5">Bhupendra Jogi 2.5</div>
+        <div class="box" id="redBox">Bhupendra Jogi 3</div>
+        <div class="box" id="box4">Bhupendra Jogi 4</div>
+        <div class="box" id="box5">Bhupendra Jogi 5</div>
+    </div>
+
+    <script>
+        console.log("Sudhanshu barnwal hello");
+
+        // let boxes = document.getElementsByClassName("box");
+        // console.log(boxes);
+        // boxes[2].style.backgroundColor = "red"
+        // boxes[2].style.color = "yellow"
+
+        // document.getElementById("redBox").style.backgroundColor = "red"
+        // document.getElementById("redBox").style.color = "yellow"
+
+        // document.querySelector(".box").style.backgroundColor = "red"
+        // document.querySelector(".box").style.color = "yellow"
+
+        console.log(document.querySelectorAll(".box"));
+
+        document.querySelectorAll(".box").forEach(e => {
+            e.style.backgroundColor = "red"
+            e.style.color = "yellow"
+        })
+
+        let box = document.getElementsByClassName("box");
+        let con = document.querySelector(".container")
+
+        console.log("box[4].matches('#redBox') :", box[4].matches("#redBox"));
+        console.log("box[3].matches('#redBox') :", box[3].matches("#redBox"));
+
+        console.log("con.contains(box[1]) :", con.contains(box[1]));
+        console.log("con.contains(box[10]) :", con.contains(box[10]));
+
+        console.log("document.querySelector('.container').contains(document.body) : ", document.querySelector(".container").contains(document.body));
+
+        console.log("document.body.contains(document.querySelector('.container')) : ", document.body.contains(document.querySelector(".container")));
+
+    </script>
+</body>
+
+</html>
