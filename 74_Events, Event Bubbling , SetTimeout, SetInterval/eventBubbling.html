@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            margin: 34px;
+            padding: 34px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .childContainer {
+            background-color: red;
+            border: 2px solid yellow;
+            margin: 34px;
+            color: white;
+            padding: 34px;
+        }
+
+        .container {
+            color: white;
+            background-color: green;
+            border: 2px solid yellow;
+            margin: 34px;
+            font-size: 30px;
+            padding: 34px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Explain Event Bubbling -->
+    <!-- When there is a child Element and parent element and if child and parent element having both event listener then
+    Child shows some propagation towards i.e. when we click child element this fire the event listener to their Parent Element -->
+
+    <div class="container">
+        I am a container
+        <div class="childContainer">
+            I am a Child Container
+            <div class="child">
+                I am a Child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click", (event) => {
+            event.stopPropagation(); // This will help to stop propagating event listener firing to its parent 
+            alert("Child was clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (event) => {
+            // Here , two alert will show when child container clicked because this childContainer is child of container so that their parent element Event listener will also fire when child was clicked
+            alert("Child Container was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", (event) => {
+            alert("Container was clicked")
+        })
+
+        document.onclick = function () { // Events Can be handled through html attributes like this without using addEventListener
+            console.log("Hello sudhanshu bhai");
+        }
+
+        let childContainer = setInterval(() => {
+            document.querySelector(".childContainer").style.backgroundColor = "rgb(" + (Math.random() * 255) + "," + (Math.random() * 255) + "," + (Math.random() * 255) + ")";
+        }, 1500);
+
+        // SetInterval function is used when a repetitive task is there so it run the fucntion again and again a certain period of time
+
+        // for stoping setInterval is used clearInterval function
+
+        // for e.g. we got childContainer = 1
+        // as we write clearInterval(childContainer); // This will going to stop setInterval function execution
+
+        setInterval(() => {
+            document.querySelector(".container").style.backgroundColor = "rgb(" + (Math.random() * 255) + "," + (Math.random() * 255) + "," + (Math.random() * 255) + ")";
+        }, 1500);
+
+
+        setTimeout(() => {
+            document.querySelector(".child").style.backgroundColor = "rgb(" + (Math.random() * 255) + "," + (Math.random() * 255) + "," + (Math.random() * 255) + ")";
+        }, 1500);
+
+        // for stoping setTimeout execution program used clearTimeout function
+
+        // for e.g. we got container = 1
+        // as we write setTimeout(container); // This will going to stop setInterval function execution
+
+    </script>
+</body>
+
+</html>
